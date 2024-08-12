@@ -1,0 +1,52 @@
+@import './../../../styles.scss';
+
+section {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: red;
+    background-image: url(./../../../assets/images/head-section/letters.jpg);
+    background-size: cover;
+    background-position: center;
+    @include display();
+}
+
+div {
+    max-width: 1200px;
+    width: 100%;
+    .info-box {
+        max-width: 440px;
+        height: 400px;
+        position: relative;
+        // @include display();
+        >.text-box {
+            position: absolute;
+            bottom: 48px;
+            left: 48px;
+            height: auto;
+            z-index: 1;
+            background-color: white;
+            // max-width: 560px;
+            padding: 32px;
+            color: $color-black-text;
+           
+            h1 {
+                font-family: 'Montserrat', Arial, sans-serif;
+                font-size: 48px;
+                font-weight: 400;
+            }
+            p, h6 {
+                font-family: 'Open Sans', Arial, sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                margin: 20px 0 0 0;
+            }       
+        }
+        >.bg-color {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 331px;
+            background-color: $color-orange;
+        }
+    }
+}

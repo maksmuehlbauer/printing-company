@@ -1,0 +1,12 @@
+@import './../../../styles.scss';
+
+section {
+    height: 500px;
+    background-color: $color-orange;
+    @include display();
+}
+
+.company-offers {
+    height: 200px;
+    background-color: aliceblue;
+}
