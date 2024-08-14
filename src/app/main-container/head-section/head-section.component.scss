@@ -3,7 +3,7 @@
 section {
     height: calc(100vh - 80px);
     width: 100%;
-    background-color: red;
+    // background-color: red;
     background-image: url(./../../../assets/images/head-section/letters.jpg);
     background-size: cover;
     background-position: center;
@@ -17,14 +17,13 @@ div {
         max-width: 440px;
         height: 400px;
         position: relative;
-        // @include display();
         >.text-box {
             position: absolute;
             bottom: 48px;
             left: 48px;
             height: auto;
             z-index: 1;
-            background-color: white;
+            background-color: $color-white;
             // max-width: 560px;
             padding: 32px;
             color: $color-black-text;
@@ -46,7 +45,7 @@ div {
             left: 0;
             bottom: 0;
             height: 331px;
-            background-color: $color-orange;
+            background-color: $color-blue-primary;
         }
     }
 }

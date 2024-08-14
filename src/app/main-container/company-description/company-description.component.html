@@ -1,7 +1,12 @@
 <section>
     <div class="desk-width">
         <div class="company-offers">
-            
+            @for(description of descriptionsData.companyOffer; track description.title) {
+                <div>
+                    <h2>{{ description.title }}</h2>
+                    <p>{{ description.description }}</p>
+                </div>
+            }
         </div>
     </div>
 </section>

@@ -1,12 +1,25 @@
 @import './../../../styles.scss';
 
 section {
-    height: 500px;
-    background-color: $color-orange;
-    @include display();
+    background-color: $color-blue-primary;
+    @include display($ai: flex-start);
 }
 
 .company-offers {
     height: 200px;
-    background-color: aliceblue;
+    @include display($jc: space-between, $ai: flex-start);
+    gap: 40px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 500;
+    color: $color-white;
+    padding: 120px 0;
+    >h1 {
+        font-size: 20px;
+    }
+    p {
+        margin-top: 20px;
+    }
+    >div {
+        width: 32%;
+    }
 }
