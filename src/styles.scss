@@ -9,17 +9,18 @@
   }
 
 $color-black-text: #111111;
-// $color-orange: #F97C37;
+$color-orange: #F97C37;
 $color-blue-primary: #0091D2;
 $color-dark-hover: #333129;
 $color-white: white;
+$color-background: #E5E5E5;
 
 button {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-    background-color: $color-blue-primary;
+    background-color: $color-orange;
     padding: 16px 60px;
     margin: 32px 0 0 0;
     border: none;

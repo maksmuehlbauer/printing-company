@@ -3,7 +3,6 @@
 section {
     height: calc(100vh - 80px);
     width: 100%;
-    // background-color: red;
     background-image: url(./../../../assets/images/head-section/letters.jpg);
     background-size: cover;
     background-position: center;
@@ -45,7 +44,7 @@ div {
             left: 0;
             bottom: 0;
             height: 331px;
-            background-color: $color-blue-primary;
+            background-color: $color-orange;
         }
     }
 }

@@ -12,4 +12,30 @@ export class CompanyService {
     { title: 'Book Production', description: 'We have a long tradition of book production. We know the industrys specific requirements inside out and offer the right service from layout to individual finishing. Now even faster and more efficient thanks to the latest technology.'},
     { title: 'Natural Paper', description: 'We offer such good conditions for optimal printing on uncoated paper: Our special uncoated workflow for offset and digital printing guarantees impressive color reproduction and quality that you can feel.' }
   ]
+
+  companyPresentation = [
+    { title: 'Personal', img: './assets/images/company-presentation/personal.png'},
+    { title: 'Certified', img: './assets/images/company-presentation/certified.png' },
+    { title: 'on Time', img: './assets/images/company-presentation/on-time.png' },
+    { title: 'Profitable', img: './assets/images/company-presentation/profitable.png' }
+  ]
+
+  companyExamples = [
+    { 
+      title: 'Laser engraving',
+      img: './assets/images/company-examples/laser-gravur.jpg',
+      description: 'Laser engraving is a precise technology that can process a wide variety of materials with high accuracy and fine details.'
+     },
+     {
+      title: 'Stiff brochure',
+      img: './assets/images/company-examples/broschur.jpg',
+      description: 'A rigid brochure combines the flexibility of a brochure with the stability of a hardcover for long-lasting books.'
+     },
+     {
+      title: 'Hardcover',
+      img: './assets/images/company-examples/hardcover.jpg',
+      description: 'A hardcover book offers special protection thanks to its solid cover and appears high-quality and durable.'
+     }
+     
+  ]
 }

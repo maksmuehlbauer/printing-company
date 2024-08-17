@@ -1,0 +1,12 @@
+<section>
+    <div class="desk-width">
+        <div class="card-box">
+            @for(presentation of presentationData.companyPresentation; track presentation.title) {
+                <div class="card">
+                    <img src="{{ presentation.img }}" alt="">
+                    <h1>{{ presentation.title }}</h1>
+                </div>
+            }
+        </div>
+    </div>
+</section>

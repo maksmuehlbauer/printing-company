@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
 section {
-    background-color: $color-blue-primary;
+    background-color: $color-orange;
     @include display($ai: flex-start);
 }
 

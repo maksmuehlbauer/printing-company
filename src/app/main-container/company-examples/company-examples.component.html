@@ -1,0 +1,15 @@
+<section>
+    <div class="desk-width">
+        <h1>The experienced partner <br> for perfect results</h1>
+        <div class="example-box">
+            @for(example of examplesData.companyExamples; track example.title) {
+                <div>
+                    <img src="{{ example.img }}" alt="">
+                    <h2>{{ example.title }}</h2>
+                    <p>{{ example.description }}</p>
+                    <h3>More</h3>
+                </div>
+            }
+        </div>
+    </div>
+</section>
