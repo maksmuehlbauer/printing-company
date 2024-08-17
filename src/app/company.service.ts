@@ -35,7 +35,25 @@ export class CompanyService {
       title: 'Hardcover',
       img: './assets/images/company-examples/hardcover.jpg',
       description: 'A hardcover book offers special protection thanks to its solid cover and appears high-quality and durable.'
-     }
-     
+     }     
+  ]
+
+  companyBenefits = [
+    {
+      img: './assets/images/company-benfits/ink.jpg',
+      title: 'Recyclable colors',
+      description: 'Recyclable paints are eco-friendly alternatives designed to minimize environmental impact. Made from sustainable materials, they can be reused or safely disposed of, reducing waste and pollution while promoting a more sustainable future'
+    },
+    {
+      img: './assets/images/company-benfits/plotter.jpg',
+      title: 'Precise color reproduction',
+      description: 'Precise color reproduction ensures that colors are accurately represented across different devices and media. It maintains consistency, allowing designs and visuals to appear as intended, whether in print, on screens, or other platforms'
+    },
+    {
+      img: './assets/images/company-benfits/pallets.jpg',
+      title: 'Worldwide delivery',
+      description: 'Our worldwide delivery ensures that your products reach any destination on Earth safely and on time. No matter where you are, we deliver your order reliably and efficiently, right to your doorstep'
+    }
+
   ]
 }

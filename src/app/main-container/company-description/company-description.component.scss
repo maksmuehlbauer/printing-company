@@ -3,6 +3,7 @@
 section {
     background-color: $color-orange;
     @include display($ai: flex-start);
+    padding-bottom: 240px;
 }
 
 .company-offers {

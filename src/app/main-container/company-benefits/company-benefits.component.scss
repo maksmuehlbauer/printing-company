@@ -1,0 +1,38 @@
+@import './../../../styles.scss';
+
+section {
+    @include display();
+    background-color: $color-background;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: $color-black-text;
+    padding: 60px 0 0 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin: 20px 0 60px 0;
+    text-align: center;
+}
+
+.single-benefit-left {
+    background-color: white;
+    @include display();
+    color: $color-black-text;
+}
+
+.single-benefit-right {
+    background-color: $color-orange;
+    @include display();
+    flex-direction: row-reverse;
+    color: white;
+}
+

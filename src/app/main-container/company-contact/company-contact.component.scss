@@ -1,0 +1,56 @@
+@import './../../../styles.scss';
+
+section {
+    @include display();
+    height: 700px;
+    background-color: $color-orange;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.contact-box {
+    background-color: aliceblue;
+    @include display();
+    flex: 1;
+}
+
+.info-box {
+    background-color: white;
+    @include display($ai: flex-start);
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    >.span-info-help {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    >ul {
+        list-style-type: circle;
+        >li {
+            margin: 8px 0;
+            font-size: 16px;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+    }
+}
+
+h1 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: $color-black-text;
+    padding: 60px 0 0 0;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    margin: 20px 0 60px 0;
+}
+
+
+
