@@ -11,13 +11,15 @@ section {
 }
 
 .contact-box {
-    background-color: aliceblue;
-    @include display();
+    // background-color: aliceblue;
+    @include display($jc: flex-start);
     flex: 1;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .info-box {
-    background-color: white;
+    background-color: rgba($color: white, $alpha: 1);
     @include display($ai: flex-start);
     flex: 1;
     flex-direction: column;
@@ -42,7 +44,12 @@ h1 {
     font-size: 30px;
     font-weight: 600;
     color: $color-black-text;
-    padding: 60px 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.h1-contact {
+    font-size: 48px;
+    color: white;
 }
 
 p {
@@ -51,6 +58,88 @@ p {
     font-weight: 400;
     margin: 20px 0 60px 0;
 }
+
+.first-element {
+    margin-top: 16px !important;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    @include display($ai: flex-start);
+    flex-direction: column;
+    margin-top: 40px;
+    >p {
+        position: absolute;
+        top: 32px;
+    }
+    >.textarea-p {
+        position: absolute;
+        bottom: -24px;
+        font-size: 14px;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-weight: 400;
+    }
+    >input {
+        font-family: 'Open Sans', Arial, sans-serif;
+        width: 100%;
+        height: 48px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding-left: 16px;
+    }
+    >textarea {
+        font-family: 'Open Sans', Arial, sans-serif;
+        width: 100%;
+        height: 96px;
+        max-height: 230px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 8px 0 0 16px;
+        resize: vertical;
+        
+    }
+    input::placeholder {
+        font-size: 16px;
+        // padding-left: 8px;
+    }
+    >img {
+        position: absolute;
+        right: 16px;
+        top: 11.5px;
+
+    }
+}
+
+.btn-submit {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid white;
+    &:hover {
+        background-color: white;
+        color: $color-orange
+    }
+}
+
+.btn-disabled {
+    width: 100%;
+    font-size: 16px;
+    border-color: $color-disabled-grey;
+    color: $color-disabled-grey;
+    cursor: default;
+    &:hover {
+        background-color: $color-orange;
+        color: $color-disabled-grey;
+    }
+}
+
+form {
+    width: 100%;
+}
+
 
 
 

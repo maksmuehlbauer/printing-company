@@ -1,6 +1,55 @@
 <section>
     <div class="desk-width d-flex">
-        <div class="contact-box">contact</div>
+        <div class="contact-box" (keyup)="checkInputs()">
+            <h1 class="h1-contact">Get In Touch</h1>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div class="input-box first-element">
+                    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="username" type="text" id="name" placeholder="Name" required>
+                    <!-- <label for="name">your Name</label> -->
+                     @if (name.dirty) {
+                        @if (contactData.name.length <= 1) {
+                            <p>please enter a name with a minimum of 2 characters</p>
+                            <img src="./assets/images/company-contact/error.png" alt="">
+                        }@else {
+                            <img src="./assets/images/company-contact/done.png" alt="">
+                        }
+                     }
+                </div>
+                <div class="input-box">
+                    <input #mail="ngModel" [(ngModel)]="contactData.mail" type="text" name="usermail" type="text" id="mail" placeholder="mail@example.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <!-- <label for="name">your Name</label> -->
+                     @if (mail.dirty) {
+                        @if (mail.errors?.['pattern']) {
+                            <p>please enter a valid mail adress: mail(at)example.de</p>
+                            <img src="./assets/images/company-contact/error.png" alt="">
+                        }@else if (contactData.mail.length > 0) {
+                            <img src="./assets/images/company-contact/done.png" alt="">
+                        }@else if (mail.errors?.['required']) {
+                            <p>Mail Adress is required</p>
+                            <img src="./assets/images/company-contact/error.png" alt="">
+                        }
+                     }
+                </div>
+                <div class="input-box">
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" name="message" type="text" id="mail" placeholder="enter a messaage" required></textarea>
+                    <!-- <label for="name">your Name</label> -->
+                     @if (message.dirty) {
+                        @if (contactData.message.length <= 10) {
+                            <h3 class="textarea-p">please enter a message with a minimum of 10 characters</h3>
+                            <img src="./assets/images/company-contact/error.png" alt="">
+                        }@else {
+                            <img src="./assets/images/company-contact/done.png" alt="">
+                        }
+                     }
+                </div>
+                <button [ngClass]="btnState()" class="btn-submit" [disabled]="isDisabled">Submit</button>
+            </form>
+        </div>
+
+
+
+
+
         <div class="info-box">
             <h1>Information</h1>
             <p> 
