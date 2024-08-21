@@ -1,0 +1,35 @@
+@import './../../styles.scss';
+
+section {
+    @include display();
+}
+
+h1 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: $color-black-text;
+    margin: 48px 0 8px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400;
+    >li {
+        padding: 2px 0;
+    }
+}
+a {
+    color: $color-black-text;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.m-bot {
+    margin-bottom: 40px;
+}

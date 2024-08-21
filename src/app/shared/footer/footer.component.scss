@@ -1,0 +1,44 @@
+@import './../../../styles.scss';
+
+section {
+    @include display();
+    background-color: $color-footer-background;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.footer-flex {
+    @include display($jc: space-between);
+    .contact-infos-container, .law-privacy-container{
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 80px 0;
+            color: white;
+            >li {
+                padding: 2px 0;
+            }
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.certified-container {
+    @include display();
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+    >img {
+        filter: invert(1);
+    }
+}
+
+

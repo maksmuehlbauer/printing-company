@@ -20,6 +20,10 @@ nav {
         font-family: 'Montserrat', Arial, sans-serif;
         font-size: 24px;
         font-weight: 400;
+        a {
+            color: $color-black-text;
+            text-decoration: none;
+        }
     }
     >img {
         width: 40px;
