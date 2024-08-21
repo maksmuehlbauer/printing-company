@@ -14,6 +14,9 @@ import { HttpClient } from '@angular/common/http';
 export class CompanyContactComponent {
 
   isDisabled: boolean = true;
+  mailTest: boolean = true;
+  http = inject(HttpClient)
+
 
   contactData = {
     name: "",
@@ -21,23 +24,50 @@ export class CompanyContactComponent {
     message: ""
   }
 
+
+  post = {
+    endPoint: 'https://maximilian-muehlbauer.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit(ngForm: NgForm) {
-    console.log(this.contactData)
-  }
-
-  checkInputs() {
-    if(this.contactData.name.length > 1 &&
-      this.contactData.mail.length > 5 &&
-      this.contactData.message.length > 9) {
-        this.isDisabled = false
-    } else {
-      this.isDisabled = true;
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            this.isDisabled = true
+            // this.userFeedback();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.info('send post TEST')
+      ngForm.resetForm();
+      this.isDisabled = true
     }
-
   }
+
+  checkValid(ngForm: NgForm){
+    if (ngForm.form.valid) {
+      this.isDisabled = false;
+    } else {
+      this.isDisabled = true
+    }
+  }
+
 
   btnState() {
     return this.isDisabled ? 'btn-disabled' : 'btn-submit'
   }
+
 
 }

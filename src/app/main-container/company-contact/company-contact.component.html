@@ -1,13 +1,13 @@
 <section>
     <div class="desk-width d-flex">
-        <div class="contact-box" (keyup)="checkInputs()">
+        <div class="contact-box" (keyup)="checkValid(contactForm)">
             <h1 class="h1-contact">Get In Touch</h1>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <div class="input-box first-element">
-                    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="username" type="text" id="name" placeholder="Name" required>
+                <div class="input-box first-element" >
+                    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="username" type="text" id="name" placeholder="Name" minlength="2" required>
                     <!-- <label for="name">your Name</label> -->
                      @if (name.dirty) {
-                        @if (contactData.name.length <= 1) {
+                        @if (name.errors?.['minlength']) {
                             <p>please enter a name with a minimum of 2 characters</p>
                             <img src="./assets/images/company-contact/error.png" alt="">
                         }@else {
@@ -15,26 +15,26 @@
                         }
                      }
                 </div>
-                <div class="input-box">
-                    <input #mail="ngModel" [(ngModel)]="contactData.mail" type="text" name="usermail" type="text" id="mail" placeholder="mail@example.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <div class="input-box" >
+                    <input #mail="ngModel" [(ngModel)]="contactData.mail" type="text" name="usermail" type="text" id="mail" placeholder="mail@example.com" minlength="6" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                     <!-- <label for="name">your Name</label> -->
                      @if (mail.dirty) {
                         @if (mail.errors?.['pattern']) {
                             <p>please enter a valid mail adress: mail(at)example.de</p>
                             <img src="./assets/images/company-contact/error.png" alt="">
-                        }@else if (contactData.mail.length > 0) {
-                            <img src="./assets/images/company-contact/done.png" alt="">
                         }@else if (mail.errors?.['required']) {
                             <p>Mail Adress is required</p>
                             <img src="./assets/images/company-contact/error.png" alt="">
+                        }@else {
+                            <img src="./assets/images/company-contact/done.png" alt="">
                         }
                      }
                 </div>
-                <div class="input-box">
-                    <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" name="message" type="text" id="mail" placeholder="enter a messaage" required></textarea>
+                <div class="input-box" >
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" name="message" type="text" id="mail" placeholder="enter a messaage" minlength="10" required></textarea>
                     <!-- <label for="name">your Name</label> -->
                      @if (message.dirty) {
-                        @if (contactData.message.length <= 10) {
+                        @if (message.errors?.['minlength']) {
                             <h3 class="textarea-p">please enter a message with a minimum of 10 characters</h3>
                             <img src="./assets/images/company-contact/error.png" alt="">
                         }@else {
