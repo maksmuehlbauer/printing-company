@@ -4,7 +4,8 @@
         <div class="example-box">
             @for(example of examplesData.companyExamples; track example.title) {
                 <div>
-                    <img src="{{ example.img }}" alt="">
+                    <div><img src="{{ example.img }}" alt=""></div>
+                    
                     <h2>{{ example.title }}</h2>
                     <p>{{ example.description }}</p>
                     <h3>More</h3>

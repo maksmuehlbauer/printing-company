@@ -5,7 +5,8 @@
     </div>
     @for(singleBenefit of benefitsData.companyBenefits; track singleBenefit.title; let index = $index) {
         <app-single-benefit [benefit]="singleBenefit"
-        id="{{ index }}"
+        [id]="index"
+
         [ngClass]="changeDirection(index)"></app-single-benefit>
     }
    

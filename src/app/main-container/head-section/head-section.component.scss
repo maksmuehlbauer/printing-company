@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
 section {
-    height: calc(100vh - 80px);
+    height: 100vh;
     width: 100%;
     background-image: url(./../../../assets/images/head-section/letters.jpg);
     background-size: cover;
@@ -16,6 +16,7 @@ div {
         max-width: 440px;
         height: 400px;
         position: relative;
+        z-index: 0;
         >.text-box {
             position: absolute;
             bottom: 48px;
@@ -47,4 +48,9 @@ div {
             background-color: $color-orange;
         }
     }
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }

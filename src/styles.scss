@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @mixin display($flex: flex, $jc: center, $ai: center) {
     display: $flex;
     justify-content: $jc;
