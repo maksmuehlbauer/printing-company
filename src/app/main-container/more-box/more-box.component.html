@@ -1,0 +1,12 @@
+
+<section *ngIf="isOpen">
+    <button *ngIf="isOpen" (click)="closeBox()">X</button>
+    <div class="img-box">
+
+    </div>
+    <div class="text-box">
+        <h1> {{ moreInfos.title }}</h1>
+        <p>{{ moreInfos.content }}</p>
+        
+    </div>
+</section>

@@ -1,0 +1,43 @@
+@import './../../../styles.scss';
+
+button {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border-radius: 99999px;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
+
+section {
+    width: 720px;
+    height: 480px;
+    background-color: $color-background;
+    border-radius: 12px;
+    @include display();
+    gap: 40px;
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-box {
+    background-color: aqua;
+    width: 160px;
+    height: 400px;
+}
+
+.text-box {
+    display: flex;
+    flex: 1;
+    background-color: red;
+    height: 400px;
+    padding: 20px;
+    @include display($ai: flex-start, $jc: flex-start);
+    flex-direction: column;
+}
