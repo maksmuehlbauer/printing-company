@@ -18,7 +18,7 @@ export class SingleBenefitComponent {
     description: 'description'
   }
 
-  @Input() id!: number;
+  @Input()id!: number;
 
   oddIdsColor(id: number): string {
     return id % 2 !== 0 ? 'special-odd-id' : ''
