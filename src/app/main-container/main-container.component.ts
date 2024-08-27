@@ -34,19 +34,23 @@ export class MainContainerComponent implements AfterViewInit {
 
 
 
-
-  openMoreBox(title: string, content: string) {
+  openMoreBoxComponent(title: string, content: string) {
     if (this.morebox) {
       this.morebox.moreInfos.title = title;
       this.morebox.moreInfos.content = content;
-      this.morebox.openBox();      
+      this.morebox.openBox();
+ 
     } else {
       console.error('MoreBoxComponent is not initialized yet.');
     }
   }
 
-  closeMoreBox() {
-    this.morebox.closeBox();
+  checkCompIsOpen():string {
+    return this.morebox && this.morebox.isOpen ? 'morebox' : 'd-none'
   }
+
+  // closeMoreBox() {
+  //   this.morebox.closeBox();
+  // }
 
 }

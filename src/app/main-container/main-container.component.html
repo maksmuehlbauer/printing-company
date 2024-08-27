@@ -2,8 +2,8 @@
 <app-company-description></app-company-description>
 <app-company-statement id="service"></app-company-statement>
 <app-company-presentation></app-company-presentation>
-<app-company-examples (openMoreBox)="openMoreBox($event.title, $event.content)" id="projects"></app-company-examples>
+<app-company-examples (sendToMoreBox)="openMoreBoxComponent($event.title, $event.content)" id="projects"></app-company-examples>
 <app-company-benefits id="performance"></app-company-benefits>
 <app-company-contact id="contact"></app-company-contact>
-<app-more-box #morebox></app-more-box>
+<app-more-box #morebox [ngClass]="checkCompIsOpen()"></app-more-box>
 

@@ -13,11 +13,11 @@ export class CompanyExamplesComponent {
 
   examplesData = inject(CompanyService)
 
-  @Output() openMoreBox = new EventEmitter<{title: string, content: string}>();
+  @Output() sendToMoreBox = new EventEmitter<{title: string, content: string}>();
 
   onMoreClick(index: number) {
     const example = this.examplesData.moreBenefitInfos[index]
-    this.openMoreBox.emit({
+    this.sendToMoreBox.emit({
       title: example.title,
       content: example.content
     })
