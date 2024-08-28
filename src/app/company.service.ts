@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,18 +8,41 @@ export class CompanyService {
 
   constructor() { }
 
+  private messageSource = new Subject<any>();
+  currentMessage = this.messageSource.asObservable();
+
+  sendMessage(message: any) {
+    this.messageSource.next(message);
+  }
+
   moreBenefitInfos = [
     {
-      title: 'laser',
-      content: '0'
+      title: 'Recyclable Inks: A Greener Choice',
+      content: 'Recyclable inks are specially formulated to be easily removed from paper during the recycling process. These inks are made with ingredients that break down more readily, allowing the paper fibers to be reclaimed and reused. By choosing recyclable inks, businesses and individuals can reduce their environmental impact and contribute to a more sustainable future.'
     },
     {
-      title: 'Stiff',
-      content: '1'
+      title: 'Color Management',
+      content: 'Color management is the process of ensuring consistent color reproduction across different devices and media. It involves creating color profiles that describe how a device perceives and reproduces color. By using color management systems, designers and printers can achieve accurate and predictable color results, regardless of the output medium. Key benefits include reducing costly reprints and ensuring that digital designs match physical prints.'
     },
     {
-      title: 'HC',
-      content: '2'
+      title: 'Global Logistic Partner',
+      content: 'Die globale Logistik ist das Herzstück des modernen Welthandels. Sie umfasst die Planung, Durchführung und Kontrolle des Transports von Gütern über Ländergrenzen hinweg. Von der Produktion bis zum Endkunden spielt die Logistik eine entscheidende Rolle in der Lieferkette. Durch Optimierung von Transportwegen, Lagerung und Zollformalitäten wird eine effiziente und kostengünstige Lieferung gewährleistet.'
+    }
+  ]
+
+
+  moreExamplesInfos = [
+    {
+      title: 'Engraving',
+      content: 'Embossed surfaces create subtle tactile experiences. We create even complicated motifs with the utmost precision – from a colorfully accentuated embossed logo on your stationery to elaborate packaging with hot foil embossing.'
+    },
+    {
+      title: 'Stiffbrochures',
+      content: 'The choice of perfect binding, thread stitching or Swiss brochure not only determines the lifespan of a book, but also its comfort and handling. Our extensive experience in book production makes us your ideal contact.'
+    },
+    {
+      title: 'Hardcover: The Classic Book Binding',
+      content: '2Producing a hardcover book is a complex process. First, the individual book pages are printed and assembled into a book block. The book block is then glued into a sturdy cover. High-quality materials such as cardboard, leather, or fabric are typically used for the cover. Often, hardcovers are further enhanced with gilded edges or other finishing touches to improve their appearance.'
     }
   ]
 

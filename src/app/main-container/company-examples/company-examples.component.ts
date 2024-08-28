@@ -16,7 +16,7 @@ export class CompanyExamplesComponent {
   @Output() sendToMoreBox = new EventEmitter<{title: string, content: string}>();
 
   onMoreClick(index: number) {
-    const example = this.examplesData.moreBenefitInfos[index]
+    const example = this.examplesData.moreExamplesInfos[index]
     this.sendToMoreBox.emit({
       title: example.title,
       content: example.content

@@ -5,5 +5,5 @@
 <app-company-examples (sendToMoreBox)="openMoreBoxComponent($event.title, $event.content)" id="projects"></app-company-examples>
 <app-company-benefits id="performance"></app-company-benefits>
 <app-company-contact id="contact"></app-company-contact>
-<app-more-box #morebox [ngClass]="checkCompIsOpen()"></app-more-box>
+<app-more-box #morebox [ngClass]="checkCompIsOpen()" (click)="closeMoreBox()"></app-more-box>
 

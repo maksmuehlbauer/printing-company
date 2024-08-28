@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject} from '@angular/core';
 import { CompanyService } from '../../../company.service';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './single-benefit.component.scss'
 })
 export class SingleBenefitComponent {
+  constructor(private companyService: CompanyService) {}
 
+  benefitData = inject(CompanyService)
 
   @Input()benefit =  {
     img: 'img path',
@@ -23,5 +25,13 @@ export class SingleBenefitComponent {
   oddIdsColor(id: number): string {
     return id % 2 !== 0 ? 'special-odd-id' : ''
   }
+
+  sendMessageToParent(id: number) {
+    // const message = { title: 'Message from nested component', content: 'This is the content' };
+    const example = this.benefitData.moreBenefitInfos[id]
+    this.companyService.sendMessage(example);
+  }
+
+
 
 }

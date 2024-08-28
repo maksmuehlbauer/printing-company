@@ -14,8 +14,11 @@ export class MoreBoxComponent {
     content: 'Content'
   }
 
-  isOpen = false;
+  handlePropagationClick(event: Event) {
+    event.stopPropagation();
+  }
 
+  isOpen = false;
 
   openBox() {
     this.isOpen = true

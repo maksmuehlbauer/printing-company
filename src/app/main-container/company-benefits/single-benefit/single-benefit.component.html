@@ -3,6 +3,6 @@
     <div [ngClass]="oddIdsColor(id)">
         <h1>{{ benefit.title }}</h1>
         <p>{{ benefit.description }}</p>
-        <h3 [ngClass]="oddIdsColor(id)">More</h3>
+        <h3 [ngClass]="oddIdsColor(id)" (click)="sendMessageToParent(id)">More</h3>
     </div>
 
