@@ -54,3 +54,37 @@ a {
     color: white;
     text-decoration: none;
 }
+
+@media (max-width: 1280px) {
+    div {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    div {
+        max-width: 1200px;
+        width: 100%;
+        @include display();
+        flex-direction: column;
+        .info-box {
+            max-width: 800px;
+            height: 400px;    
+            >.text-box {
+                left: 24px;
+                height: auto;
+                @include display($ai: flex-start);
+            }
+            >.bg-color {
+                position: absolute;
+                left: -24px;
+                bottom: 0;
+                height: 331px;
+                background-color: $color-orange;
+            }
+        }
+    }
+    br {
+        display: none;
+    }
+}

@@ -54,9 +54,12 @@ nav {
             text-decoration-thickness: 2px;
             font-weight: 500;
         }
+    }
+}
 
-
-
+@media (max-width: 1280px) {
+    .desk-width {
+        padding: 0 40px;
     }
 }
 

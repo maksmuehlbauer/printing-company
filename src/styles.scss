@@ -87,8 +87,6 @@ button:hover {
     src: url('./assets/fonts/montserrat-v26-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
-
-
   /* open-sans-300 - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -137,3 +135,9 @@ button:hover {
     font-weight: 800;
     src: url('./assets/fonts/open-sans-v40-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  @media (max-width: 1280px) {
+    .desk-width {
+        padding: 0 40px;
+    }
+}

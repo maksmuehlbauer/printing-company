@@ -72,3 +72,19 @@ h1 {
         font-size: 16px;
     }
 }
+
+@media (max-width: 1024px) {
+    .example-box {
+        >div {
+            >div {
+                height: 240px;
+                >img {
+                    height: 240px;
+                }
+            }
+        }
+        h3 {
+            margin: 24px 0 20px 0;
+        }
+    }
+}

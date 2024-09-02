@@ -1,5 +1,14 @@
 @import './../../../../styles.scss';
 
+// :host {
+//     // background-color: black !important;
+//     color: red !important;
+// }
+
+:host(.active) {
+    font-weight: italic !important;
+}
+
 img {
     width: 50%;
     height: 400px;
