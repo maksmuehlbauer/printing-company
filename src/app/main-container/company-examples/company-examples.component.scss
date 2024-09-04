@@ -58,7 +58,7 @@ h1 {
         text-underline-offset: 8px;
         width: 50px;
         cursor: pointer;
-        transition: all 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
         &:hover {
             transform: translateY(-8px);
             
@@ -86,5 +86,59 @@ h1 {
         h3 {
             margin: 24px 0 20px 0;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .example-box {
+        align-items: stretch;
+        >div {
+            // height: 512px;
+            >div {
+                height: 218px;
+                >img {
+                    height: 218px;
+                }
+            }
+        }
+        h2 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 15.6px;
+        }
+        h3 {
+            margin: 24px 0 8px 0;
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    br {
+        display: none;
+    }
+    h1 {
+        font-size: 32px;
+        padding: 60px 0 48px 0;
+    }
+    .example-box {
+        flex-direction: column;
+        >div {
+            margin-bottom: 24px;
+            >div {
+                height: 240px;
+                >img {
+                    height: 240px;
+                }
+            }
+        }
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
+
     }
 }

@@ -41,4 +41,35 @@ section {
     }
 }
 
+@media (max-width: 768px) {
+    .footer-flex {
+        flex-direction: column;
+    }
+
+    ul {
+        margin: 20px !important;
+    }
+
+    .certified-container:nth-child(2) {
+        order: 1;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .law-privacy-container:nth-child(3){
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        ul {
+            display: flex;
+            gap: 40px;
+        }
+    }
+
+    .contact-infos-container:nth-child(1) {
+        order: 3;
+    }
+}
+
 

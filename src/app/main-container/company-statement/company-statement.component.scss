@@ -4,7 +4,6 @@ section {
     background-color: $color-orange;
     @include display($ai: flex-start);
     height: 500px;
-    
 }
 
 h1 {
@@ -20,4 +19,25 @@ img {
     width: 100%;
     object-fit: cover;
     height: 650px;
+}
+
+@media (max-width: 768px) {
+    section {
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 32px;
+        padding: 0 0 32px 0;
+    }
+
+    br {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+    }
 }

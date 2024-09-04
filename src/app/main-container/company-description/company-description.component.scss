@@ -14,13 +14,33 @@ section {
     font-weight: 500;
     color: $color-white;
     padding: 120px 0;
-    >h1 {
-        font-size: 20px;
-    }
     p {
         margin-top: 20px;
     }
     >div {
         width: 32%;
+    }
+}
+
+@media (max-width: 900px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-bottom: 0;
+    }
+
+    .company-offers {
+        flex-direction: column;
+        height: auto;
+        p {
+            margin-top: 8px;
+        }
+        >div {
+            width: 100%;
+        }
     }
 }

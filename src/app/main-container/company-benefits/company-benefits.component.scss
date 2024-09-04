@@ -42,3 +42,23 @@ h2 {
     }
 }
 
+@media (max-width: 900px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .single-benefit-left {
+        flex-direction: column;
+    }
+    
+    .single-benefit-right {
+        flex-direction: column;
+    }
+}
+

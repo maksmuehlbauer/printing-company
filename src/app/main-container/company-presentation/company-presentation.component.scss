@@ -45,5 +45,35 @@ section {
     }
 }
 
+@media (max-width: 900px) {
+    .card-box {
+        margin-top: 225px;
+        >.card {
+            width: 140px;
+            height: 140px;
+            >h1 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card-box {
+        margin-top: 168px;
+        @include display($flex: grid);
+        grid-template-columns: 0fr 0fr;
+        gap: 20px;
+        height: auto;
+        >.card {
+            width: 140px;
+            height: 140px;
+            >img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
 
 

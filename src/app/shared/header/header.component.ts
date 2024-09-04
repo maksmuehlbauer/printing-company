@@ -23,12 +23,6 @@ menuToggle() {
   }
 }
 
-removeZindexAfterDelay() {
-  setTimeout(() => {
-    this.menuVisible = false;
-  }, 500);
-}
-
 toggleMenu(): string {
   return this.menuVisible ? 'menu-open' : '';
 }
