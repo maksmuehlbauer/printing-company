@@ -1,15 +1,13 @@
-<section [class.z-index]="menuVisible">
+<section>
     <div class="desk-width">
         <nav>
             <h1><a href="">Printing Company</a></h1>
             <img src="./../../../assets/images/head-section/menu.png" (click)="menuToggle()">
-            <div>
-                <div class="menu">
-                    <a href="#service">Service</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#performance">Performance</a>
-                </div>
+            <div class="menu" [ngClass]="toggleMenu()">
+                <a href="#service" (click)="menuToggle()">Service</a>
+                <a href="#projects" (click)="menuToggle()">Projects</a>
+                <a href="#contact" (click)="menuToggle()">Contact</a>
+                <a href="#performance" (click)="menuToggle()">Performance</a>
             </div>
         </nav>
     </div>

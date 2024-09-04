@@ -11,26 +11,36 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
  menuVisible: boolean = false;
-//  scrollEnabled: boolean = true;
+ scrollEnabled: boolean = true;
   
 menuToggle() {
   if(!this.menuVisible) {
     this.menuVisible = true;
-    // this.toggleScrolling()
+    this.toggleScrolling()
   } else {
     this.menuVisible = false;
-    // this.toggleScrolling()
+    this.toggleScrolling()
   }
 }
 
-// toggleScrolling() {
-//   if (this.scrollEnabled) {
-//       document.body.style.overflow = 'hidden';
-//       this.scrollEnabled = false;
-//   } else {
-//       document.body.style.overflow = 'auto';
-//       this.scrollEnabled = true;
-//   }
+removeZindexAfterDelay() {
+  setTimeout(() => {
+    this.menuVisible = false;
+  }, 500);
+}
 
-//   }
+toggleMenu(): string {
+  return this.menuVisible ? 'menu-open' : '';
+}
+
+toggleScrolling() {
+  if (this.scrollEnabled) {
+      document.body.style.overflow = 'hidden';
+      this.scrollEnabled = false;
+  } else {
+      document.body.style.overflow = 'auto';
+      this.scrollEnabled = true;
+  }
+
+}
 }
