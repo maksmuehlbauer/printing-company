@@ -41,6 +41,10 @@ section {
     }
 }
 
+.only-mob {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .footer-flex {
         flex-direction: column;
@@ -48,13 +52,16 @@ section {
 
     ul {
         margin: 20px !important;
+        @include display();
+        flex-wrap: wrap;
     }
 
     .certified-container:nth-child(2) {
         order: 1;
         flex-direction: row;
         gap: 20px;
-        margin-top: 40px;
+        margin-top: 60px;
+
     }
 
     .law-privacy-container:nth-child(3){
@@ -69,6 +76,18 @@ section {
 
     .contact-infos-container:nth-child(1) {
         order: 3;
+        margin-bottom: 60px;
+        
+    }
+
+    .only-mob {
+        display: contents;
+    }
+}
+
+@media (max-width: 430px) {
+    h1 {
+        font-size: 20px;
     }
 }
 
