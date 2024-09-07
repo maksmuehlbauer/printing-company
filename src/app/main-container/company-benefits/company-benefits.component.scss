@@ -36,6 +36,12 @@ h2 {
     color: white;
 }
 
+.width-1920 {
+    width: 100%;
+    // max-width: 2400px;
+
+}
+
 @media (max-width: 1024px) {
     h1 {
         font-size: 40px;
@@ -60,6 +66,7 @@ h2 {
     .single-benefit-right {
         flex-direction: column;
     }
+
 }
 
 @media (max-width: 430px) {

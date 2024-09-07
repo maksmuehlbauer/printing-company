@@ -3,11 +3,14 @@
         <h1>Entrust us with your book project – we will make it easy and effortless for you</h1>
         <h2>Our Company offer unprecendented value, reliability, and support to project partners.</h2>
     </div>
-    @for(singleBenefit of benefitsData.companyBenefits; track singleBenefit.title; let index = $index) {
-        <app-single-benefit 
-        [benefit]="singleBenefit"
-        [id]="index"
-        [ngClass]="changeDirection(index)"></app-single-benefit>
-    }
+    <div class="width-1920">
+        @for(singleBenefit of benefitsData.companyBenefits; track singleBenefit.title; let index = $index) {
+            <app-single-benefit 
+            [benefit]="singleBenefit"
+            [id]="index"
+            [ngClass]="changeDirection(index)"></app-single-benefit>
+        }
+    </div>
+
 
 </section>

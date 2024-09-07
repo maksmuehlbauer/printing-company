@@ -2,12 +2,12 @@
     <div class="desk-width">
         <nav>
             <h1><a href="">Printing Company</a></h1>
-            <img src="./../../../assets/images/head-section/menu.png" (click)="menuToggle()">
+            <img src="./../../../assets/images/head-section/menu.png" (click)="openCloseMenu()">
             <div class="menu" [ngClass]="toggleMenu()">
-                <a href="#service" (click)="menuToggle()">Service</a>
-                <a href="#projects" (click)="menuToggle()">Projects</a>
-                <a href="#contact" (click)="menuToggle()">Contact</a>
-                <a href="#performance" (click)="menuToggle()">Performance</a>
+                <a href="#service" (click)="checkScrolling()">Service</a>
+                <a href="#projects" (click)="checkScrolling()">Projects</a>
+                <a href="#contact" (click)="checkScrolling()">Contact</a>
+                <a href="#performance" (click)="checkScrolling()">Performance</a>
             </div>
         </nav>
     </div>

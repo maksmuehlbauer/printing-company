@@ -13,7 +13,8 @@ export class HeaderComponent {
  menuVisible: boolean = false;
  scrollEnabled: boolean = true;
   
-menuToggle() {
+
+openCloseMenu() {
   if(!this.menuVisible) {
     this.menuVisible = true;
     this.toggleScrolling()
@@ -23,9 +24,13 @@ menuToggle() {
   }
 }
 
-toggleMenu(): string {
-  return this.menuVisible ? 'menu-open' : '';
+checkScrolling() {
+  if (this.menuVisible && !this.scrollEnabled) {
+    this.toggleScrolling()
+    this.menuVisible = false
+  }
 }
+
 
 toggleScrolling() {
   if (this.scrollEnabled) {
@@ -35,6 +40,10 @@ toggleScrolling() {
       document.body.style.overflow = 'auto';
       this.scrollEnabled = true;
   }
+}
 
+
+toggleMenu(): string {
+  return this.menuVisible ? 'menu-open' : '';
 }
 }

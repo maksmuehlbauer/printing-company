@@ -1,0 +1,21 @@
+<div class="info-box">
+    <h1>Information</h1>
+    <p> 
+        The more details you provide about your project, the quicker and more effectively we can assist you. If you don’t have all the info yet, no worries—contact us by email or phone. Also, please include your phone number and a preferred callback time so we can assist you promptly.
+    </p>
+    <span class="span-info-help">Informationen for quick help</span>
+    <div>
+        <button class="drop-down-button" (click)="toggleMenu(0)">Size</button>
+        <div class="drop-down-menu" [ngClass]="showCloseMenu(0)">
+            <p>The Size of your projekt in width x height</p>
+        </div>
+    </div>
+    <div>
+        <button class="drop-down-button" (click)="toggleMenu(1)">Count</button>
+        <div class="drop-down-menu" [ngClass]="showCloseMenu(1)">
+            <p>The Count of your projekt, how many copies</p>
+        </div>
+    </div>
+
+
+</div>

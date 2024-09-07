@@ -32,6 +32,7 @@ p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
+    max-width: 768px;
 }
 
 h3 {
@@ -54,6 +55,9 @@ h3 {
 .special-odd-id {
     color: $color-black-text;
     text-decoration-color: $color-black-text;
+    @include display($ai: flex-end);
+    flex-direction: column;
+    text-align: right;
 }
 
 @media (max-width: 900px) {
@@ -85,6 +89,12 @@ h3 {
 
     h3 {
         margin: 40px 0 60px 0;
+    }
+
+    .special-odd-id {
+        @include display($ai: flex-start);
+        flex-direction: column;
+        text-align: left;
     }
 }
 

@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { MailSendComponent } from './mail-send/mail-send.component';
+import { InformationComponent } from "./information/information.component";
 
 
 @Component({
   selector: 'app-company-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, MailSendComponent],
+  imports: [CommonModule, FormsModule, MailSendComponent, InformationComponent],
   templateUrl: './company-contact.component.html',
   styleUrl: './company-contact.component.scss'
 })
